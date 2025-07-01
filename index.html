@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="description"
+      content="村井麻優のポートフォリオサイト。職歴や仕事への思い、作品を載せています。"
+    />
+    <meta name="author" content="Mクラブ" />
+    <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    <title>村井麻優のポートフォリオ</title>
+
+    <link href="css/reset.css" rel="stylesheet" />
+    <!-- <link href="css/style.css" rel="stylesheet" /> -->
+    <link href="css/style-newdesign.css" rel="stylesheet" />
+    <link href="css/background.css" rel="stylesheet" />
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
+
+    <!-- Tailwind JS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+
+  <body id="top" class="background">
+    <div id="wrap">
+      <header>
+        <input type="checkbox" id="drawerCheckbox" />
+        <label id="drawerIcon" for="drawerCheckbox" aria-label="Open menu">
+          <span class="menuBtn tagBtn">menu</span>
+        </label>
+        <label id="drawerClose" for="drawerCheckbox"></label>
+        <nav id="gNavi" role="navigation">
+          <ul class="gNaviList">
+            <li class="gNaviItem"><a href="#top">Top</a></li>
+            <li class="gNaviItem"><a href="#website">Web Site</a></li>
+            <li class="gNaviItem"><a href="#design">Design</a></li>
+            <li class="gNaviItem"><a href="#aboutme">About Me</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!-- 白背景 -->
+        <div class="fixedBox">
+          <!-- コンテンツ -->
+          <div id="contentsWrap">
+            <!-- ロゴ -->
+            <div class="logoArea">
+              <svg
+                class="handDeco"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="40 20 300 200"
+              >
+                <image href="images/handleft.svg" x="0" y="0" />
+              </svg>
+              <h1 class="ballet-heading">
+                Murai Mayu's<span class="heading-bigger">Portfolio</span>
+              </h1>
+              <svg
+                class="handDeco"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="-170 20 300 300"
+              >
+                <image href="images/handright.svg" x="0" y="0" />
+              </svg>
+            </div>
+            <!-- /.logoArea -->
+            <!-- WEBサイト -->
+            <section id="website" class="contentsArea">
+              <h2 class="contentsHeading">Web Site</h2>
+              <div class="thumbnailArea">
+                <!-- WEBサイトコンテンツ1 -->
+                <div class="thumbnailItem border">
+                  <button type="button" data-modal="modal1" class="modalOpen">
+                    <img
+                      src="images/websitethumbnail1.png"
+                      alt="WEBサイト「Mew and I」サムネイル"
+                      class="thumbnailImage"
+                    />
+                    <div class="thumbnailText">
+                      <h3 class="thumbnailTitle">
+                        WordPressオリジナルテーマサイト
+                      </h3>
+                      <p class="thumbnailDescripition">
+                        保護猫譲渡をテーマにしたサイト（自主制作・架空サイト）
+                      </p>
+                    </div>
+                    <!--/.thumbnailText-->
+                  </button>
+                </div>
+                <!--/.thumbnailItem-->
+                <!-- WEBサイトコンテンツ2 -->
+                <div class="thumbnailItem border">
+                  <button type="button" data-modal="modal2" class="modalOpen">
+                    <img
+                      src="images/websitethumbnail2.png"
+                      alt="カフェサイトサムネイル"
+                      class="thumbnailImage"
+                    />
+                    <div class="thumbnailText">
+                      <h3 class="thumbnailTitle">カフェサイトのサイト模写</h3>
+                      <p class="thumbnailDescripition">
+                        カフェサイトのトップページの模写
+                      </p>
+                    </div>
+                    <!--/.thumbnailText-->
+                  </button>
+                </div>
+                <!--/.thumbnailItem-->
+                <!-- WEBサイトコンテンツ3 -->
+                <div class="thumbnailItem border">
+                  <button type="button" data-modal="modal3" class="modalOpen">
+                    <img
+                      src="images/websitethumbnail3.png"
+                      alt="ポートフォリオサイトサムネイル"
+                      class="thumbnailImage"
+                    />
+                    <div class="thumbnailText">
+                      <h3 class="thumbnailTitle">ポートフォリオサイト</h3>
+                      <p class="thumbnailDescripition">
+                        成果物をまとめたサイト（自主制作）
+                      </p>
+                    </div>
+                    <!--/.thumbnailText-->
+                  </button>
+                </div>
+                <!--/.thumbnailItem-->
+              </div>
+              <!--/.thumbnailArea-->
+              <!-- モーダル1 -->
+              <div id="modal1" class="modal">
+                <div class="modalBox">
+                  <span class="closeBtn" data-close>&times;</span>
+                  <div class="modalContent border">
+                    <h3 class="modalHeading">WordPressサイト「Mew & I」</h3>
+                    <img
+                      src="images/websitethumbnail1.png"
+                      alt="WEBサイト「Mew and I」サムネイル"
+                      class="modalImage thumbnailImage"
+                    />
+
+                    <div class="modalTagArea border">
+                      <p class="tag tagBtn">自主制作</p>
+                      <p class="tag tagBtn">HTML</p>
+                      <p class="tag tagBtn">CSS</p>
+                      <p class="tag tagBtn">PHP</p>
+                      <p class="tag tagBtn">JS</p>
+                    </div>
+                    <div class="modalLinkArea border">
+                      <a href="https://mmewandii.stars.ne.jp/wp/"
+                        ><span class="link tagBtn">→Demoサイト</span></a
+                      >
+                      <a href=""><span class="link tagBtn">→Git</span></a>
+                      <a href=""><span class="link tagBtn">→企画書</span></a>
+                    </div>
+
+                    <p class="modalOverview">
+                      WordPressでオリジナルテーマを作成し、保護猫譲渡サイトを制作しました。レスポンシブデザインに対応しています。
+                    </p>
+                    <span class="scroll">scroll</span>
+                    <h4 class="modalDescriptionHeading">・2種類の投稿方法</h4>
+                    <p class="modalDescription">
+                      一般投稿でお知らせ関係の投稿ができるようにしています。
+                      カスタム投稿では保護猫の情報がわかりやすく記載できるよう、
+                      また情報ごとに記事をまとめられるように、タクソノミーを設定しています。
+                    </p>
+                    <h4 class="modalDescriptionHeading">
+                      ・お問い合わせフォームの設置
+                    </h4>
+                    <p class="modalDescription">
+                      プラグイン「Contact Form 7」を使用し、実際に使用可能な
+                      お問い合わせフォームを設置しています。
+                    </p>
+                    <h4 class="modalDescriptionHeading">
+                      ・サイト/ロゴデザイン
+                    </h4>
+                    <p class="modalDescription">
+                      「保護猫との暮らしを身近に」がコンセプトです。
+                      保護猫を家に迎えるイメージができるよう、
+                      温かい室内のイメージをカラーコンセプトにしました。
+                      ロゴデザインも、家の中に猫と人が暮らしている様子を
+                      表しました。
+                    </p>
+                  </div>
+                  <!--/.modalContent-->
+                </div>
+                <!-- /.modalBox -->
+              </div>
+              <!-- /.modal -->
+              <!-- モーダル2 -->
+              <div id="modal2" class="modal">
+                <div class="modalBox">
+                  <span class="closeBtn" data-close>&times;</span>
+                  <div class="modalContent border">
+                    <h3 class="modalHeading">カフェサイト</h3>
+                    <img
+                      src="images/websitethumbnail2.png"
+                      alt="カフェサイトサムネイル"
+                      class="modalImage thumbnailImage"
+                    />
+
+                    <div class="modalTagArea border">
+                      <p class="tag tagBtn">サイト模写</p>
+                      <p class="tag tagBtn">JS</p>
+                      <p class="tag tagBtn">Slick.js</p>
+                    </div>
+                    <div class="modalLinkArea border">
+                      <a href=""
+                        ><span class="link tagBtn">→Demoサイト</span></a
+                      >
+                      <a href=""><span class="link tagBtn">→Git</span></a>
+                    </div>
+
+                    <p class="modalDescription1">
+                      既存サイトのトップページを模写し、デザインをコードで再現しました。レスポンシブにも対応しています。
+                    </p>
+                    <!-- <span class="scroll">scroll</span> -->
+                    <p class="modalDescription2">
+                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                  </div>
+                  <!--/.modalContent-->
+                </div>
+                <!-- /.modalBox -->
+              </div>
+              <!-- /.modal -->
+              <!-- モーダル3 -->
+              <div id="modal3" class="modal">
+                <div class="modalBox">
+                  <span class="closeBtn" data-close>&times;</span>
+                  <div class="modalContent border">
+                    <h3 class="modalHeading">ポートフォリオサイト</h3>
+                    <img
+                      src="images/websitethumbnail3.png"
+                      alt="WEBサイト「Mew and I」サムネイル"
+                      class="modalImage thumbnailImage"
+                    />
+
+                    <div class="modalTagArea border">
+                      <p class="tag tagBtn">自主制作</p>
+                      <p class="tag tagBtn">JS</p>
+                    </div>
+                    <div class="modalLinkArea border">
+                      <a href=""
+                        ><span class="link tagBtn">→Demoサイト</span></a
+                      >
+                      <a href=""><span class="link tagBtn">→Git</span></a>
+                    </div>
+
+                    <p class="modalDescription1">
+                      自身の成果物を見やすくまとめました。
+                    </p>
+                    <!-- <span class="scroll">scroll</span> -->
+                    <p class="modalDescription2">
+                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                  </div>
+                  <!--/.modalContent-->
+                </div>
+                <!-- /.modalBox -->
+              </div>
+              <!-- /.modal -->
+            </section>
+            <!--/#website-->
+
+            <!-- デザイン -->
+
+            <!--/#design-->
+          </div>
+          <!--/#contentsWrap-->
+        </div>
+        <!--/.fixedBox-->
+      </main>
+      <footer>
+        <p id="pageTop">
+          <a href="#top"><img src="images/logo.png" alt="ページトップ" /></a>
+        </p>
+        <p class="copyright"><small>&copy;2025</small></p>
+      </footer>
+    </div>
+    <!--/#wrap-->
+
+    <!-- ロゴアニメーション -->
+    <script>
+      const images = document.querySelectorAll('.handDeco image');
+
+      images.forEach((img) => {
+        gsap.to(img, {
+          duration: 3,
+          rotate: 15, // 15度傾ける
+          transformOrigin: '50% 50%', // 回転の軸を中央に
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+        });
+      });
+    </script>
+
+    <!-- モーダル -->
+    <script>
+      // 表示
+      document.querySelectorAll('button[data-modal]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const modalId = button.dataset.modal;
+          document.getElementById(modalId).style.display = 'flex';
+        });
+      });
+
+      // 閉じる（モーダル外部または閉じるボタンをクリック）
+      document.querySelectorAll('.modal').forEach((modal) => {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal || e.target.dataset.close !== undefined) {
+            modal.style.display = 'none';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
