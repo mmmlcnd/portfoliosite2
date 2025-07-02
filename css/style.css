@@ -5,12 +5,21 @@
   box-sizing: border-box;
 }
 
+/* HTMLとbodyの初期設定 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* bodyの最小高さを設定し、コンテンツに合わせて伸びるようにする */
+  min-height: 100vh;
+}
+
 body {
   color: #000000;
   font-family: YuMincho, 'Yu Mincho', 'Hiragino Mincho ProN', 'serif';
   position: relative;
   line-height: 1.5;
-  min-height: 100vh;
 }
 
 a {
@@ -184,10 +193,6 @@ header {
     right: 8%;
   }
 
-  .logoArea {
-    margin: 50px 0 0 0;
-  }
-
   .ballet-heading {
     width: 300px;
     left: 70% !important;
@@ -200,18 +205,20 @@ header {
 }
 
 .logoArea {
-  width: 100%;
+  width: 350px;
   min-height: 200px;
-  margin: 100px 0;
   display: flex;
   background-color: #e4afbe;
+  position: relative;
+  top: 50vh;
+  margin: 0 auto;
 }
 
 svg {
   overflow: visible;
   display: block;
   position: absolute;
-  top: 430px;
+  top: 0px;
   left: 10%;
   transform: translate(-50%);
 }
@@ -223,7 +230,7 @@ svg:nth-of-type(2) {
 .ballet-heading {
   font-size: 2rem;
   position: absolute;
-  top: 500px;
+  top: 50px;
   left: 70%;
   transform: translate(-50%, -50%);
   width: 300px;
@@ -238,10 +245,11 @@ svg:nth-of-type(2) {
 .contentsArea {
   width: 100%;
   padding: 40px 0;
+  /* margin: 800px 0 0 0; */
 }
 
 .contentsArea:nth-of-type(1) {
-  margin-top: 250px;
+  margin-top: 500px;
 }
 
 .contentsHeading {
