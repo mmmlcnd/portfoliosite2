@@ -169,33 +169,37 @@ header {
 /* ============ */
 
 .logoArea {
-  height: 600px;
-  background-color: #5b0d9f;
-}
-
-.handDeco {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 700px;
+  position: relative;
 }
 
 svg {
   overflow: visible;
+  display: block;
+  position: absolute;
+  top: 500px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+svg:nth-of-type(2) {
+  left: 110%;
 }
 
 .ballet-heading {
   font-size: 2rem;
   position: absolute;
-  top: 80px;
-  left: 50%;
+  top: 550px;
+  left: 70%;
   transform: translate(-50%, -50%);
+  width: 300px;
 }
 
 .heading-bigger {
   font-size: 3rem;
   position: absolute;
-  left: 20%;
+  left: 5%;
 }
 
 #contentsWrap {
