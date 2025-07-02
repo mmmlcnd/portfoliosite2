@@ -64,11 +64,19 @@
               <svg
                 class="handDeco"
                 xmlns="http://www.w3.org/2000/svg"
-                width="400px"
-                height="400px"
-                viewBox="0 0 300 300"
+                width="200px"
+                height="200px"
+                viewBox="0 0 200 200"
               >
-                <image href="images/handleft.svg" x="0" y="0" />
+                <g class="hand-image-group">
+                  <image
+                    href="images/handleft.svg"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                  />
+                </g>
               </svg>
               <h1 class="ballet-heading">
                 Murai Mayu's<span class="heading-bigger">Portfolio</span>
@@ -76,11 +84,19 @@
               <svg
                 class="handDeco"
                 xmlns="http://www.w3.org/2000/svg"
-                width="400px"
-                height="400px"
-                viewBox="0 0 300 300"
+                width="200px"
+                height="200px"
+                viewBox="0 0 200 200"
               >
-                <image href="images/handright.svg" x="0" y="0" />
+                <g class="hand-image-group">
+                  <image
+                    href="images/handright.svg"
+                    x="0"
+                    y="0"
+                    width="200"
+                    height="200"
+                  />
+                </g>
               </svg>
             </div>
             <!-- /.logoArea -->
@@ -307,7 +323,8 @@
         gsap.to(img, {
           duration: 3,
           rotate: 15, // 15度傾ける
-          transformOrigin: '50% 50%', // 回転の軸を中央に
+          // transformOrigin: '50% 50%',
+          svgOrigin: '100 100', // SVG要素の中央を基準に回転させる
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut',
