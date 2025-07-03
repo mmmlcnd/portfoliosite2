@@ -211,11 +211,20 @@ header {
 
 .logoArea {
   width: 100%;
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+@media screen and (max-width: 479px) {
+  svg {
+    width: 20% !important;
+  }
+
+  .heading1Area {
+    white-space: nowrap;
+  }
 }
 
 svg {
@@ -223,23 +232,17 @@ svg {
   width: 100px;
   height: 200px;
   display: block;
-  /* position: absolute; */
-  /* top: 0px; */
-  /* left: 5%;
-  transform: translate(-50%); */
-  /* background-color: #dfbbff; */
 }
 
-svg:nth-of-type(2) {
-  left: 70%;
-}
+/* svg:nth-of-type(2) {
+  left: 70%; 
+} */
 
 .heading1Area {
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #c0afe4; */
   position: relative;
 }
 
