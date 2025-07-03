@@ -156,9 +156,6 @@ header {
   top: 8%;
   left: 50%;
   transform: translate(-50%);
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   overflow: scroll;
 }
 
@@ -259,10 +256,19 @@ svg {
   left: 10%;
 }
 
+@media screen and (min-with: 900px) {
+  .thumbnailArea {
+    display: flex;
+  }
+
+  .thumbnailItem {
+    width: 50%;
+  }
+}
+
 .contentsArea {
   width: 100%;
   padding: 40px 0;
-  /* margin: 800px 0 0 0; */
 }
 
 .contentsArea:nth-of-type(1) {
@@ -282,6 +288,9 @@ svg {
 
 .thumbnailItem {
   border-bottom: none;
+  background-color: #c0afe4;
+  display: flex;
+  justify-content: center;
 }
 
 .thumbnailItem:nth-child(3) {
@@ -430,6 +439,28 @@ svg {
 
 h4.modalDescriptionHeading:nth-of-type(1) {
   padding: 100px 0 0 0;
+}
+
+.aboutmeItem {
+  border-bottom: solid #666666 1px;
+}
+
+.aboutmeTextArea {
+  padding: 0 20px 60px 20px;
+}
+
+.skillTagArea {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 0 20px 0;
+}
+
+.tagArea {
+  width: 70%;
+}
+
+.skillTag {
+  background-color: #ffd7d9;
 }
 
 #pageTop {
