@@ -507,14 +507,22 @@
     </script>
 
     <!-- モーダル -->
+
     <script>
+      let scrollPosition = 0; // 現在のスクロール位置を保持する変数
+
       // 表示
       document.querySelectorAll('button[data-modal]').forEach((button) => {
         button.addEventListener('click', () => {
           const modalId = button.dataset.modal;
           document.getElementById(modalId).style.display = 'flex';
-          // モーダルが開いている間、bodyのスクロールを停止する
-          document.body.style.overflow = 'hidden'; // <-- この行が重要です
+
+          // モーダル表示時にbodyのスクロールを無効化
+          scrollPosition = window.scrollY; // 現在のスクロール位置を記録
+          document.body.style.overflow = 'hidden'; // overflow: hidden; を適用
+          document.body.style.position = 'fixed'; // position: fixed; を適用
+          document.body.style.width = '100%'; // 幅を100%に設定（固定されたときに幅が崩れないように）
+          document.body.style.top = `-${scrollPosition}px`; // 記録したスクロール位置に固定
         });
       });
 
@@ -523,8 +531,13 @@
         modal.addEventListener('click', (e) => {
           if (e.target === modal || e.target.dataset.close !== undefined) {
             modal.style.display = 'none';
-            // モーダルが閉じたら、bodyのスクロールを再度有効にする
-            document.body.style.overflow = ''; // <-- この行で元に戻します
+
+            // モーダル非表示時にbodyのスクロールを有効化
+            document.body.style.overflow = ''; // overflow をリセット
+            document.body.style.position = ''; // position をリセット
+            document.body.style.width = ''; // width をリセット
+            document.body.style.top = ''; // top をリセット
+            window.scrollTo(0, scrollPosition); // 元のスクロール位置に戻す
           }
         });
       });
