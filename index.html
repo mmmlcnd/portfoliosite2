@@ -64,9 +64,9 @@
               <svg
                 class="handDeco"
                 xmlns="http://www.w3.org/2000/svg"
-                width="200"
-                height="200"
-                viewBox="0 0 200 200"
+                width="100"
+                height="100"
+                viewBox="30 0 100 100"
               >
                 <g class="hand-image-group">
                   <image
@@ -78,15 +78,17 @@
                   />
                 </g>
               </svg>
-              <h1 class="ballet-heading">
-                Murai Mayu's<span class="heading-bigger">Portfolio</span>
-              </h1>
+              <div class="heading1Area">
+                <h1 class="ballet-heading">
+                  Murai Mayu's<span class="heading-bigger">Portfolio</span>
+                </h1>
+              </div>
               <svg
                 class="handDeco"
                 xmlns="http://www.w3.org/2000/svg"
-                width="200"
-                height="200"
-                viewBox="0 0 200 200"
+                width="100"
+                height="100"
+                viewBox="80 0 100 100"
               >
                 <g class="hand-image-group">
                   <image
@@ -186,7 +188,6 @@
                       <a href=""><span class="link tagBtn">→Git</span></a>
                       <a href=""><span class="link tagBtn">→企画書</span></a>
                     </div>
-
                     <p class="modalOverview">
                       WordPressでオリジナルテーマを作成し、保護猫譲渡サイトを制作しました。レスポンシブデザインに対応しています。
                     </p>
@@ -261,7 +262,7 @@
                     <h3 class="modalHeading">ポートフォリオサイト</h3>
                     <img
                       src="images/websitethumbnail3.png"
-                      alt="WEBサイト「Mew and I」サムネイル"
+                      alt="ポートフォリオサムネイル"
                       class="modalImage thumbnailImage"
                     />
                     <div class="modalTagArea border">
@@ -275,8 +276,7 @@
                       >
                       <a href=""><span class="link tagBtn">→Git</span></a>
                     </div>
-
-                    <p class="modalDescription1">
+                    <p class="modalOverview">
                       自身の成果物を見やすくまとめました。
                     </p>
                     <!-- <span class="scroll">scroll</span> -->
@@ -461,6 +461,8 @@
         button.addEventListener('click', () => {
           const modalId = button.dataset.modal;
           document.getElementById(modalId).style.display = 'flex';
+          // モーダルが開いている間、bodyのスクロールを停止する
+          document.body.style.overflow = 'hidden'; // <-- この行が重要です
         });
       });
 
@@ -469,6 +471,8 @@
         modal.addEventListener('click', (e) => {
           if (e.target === modal || e.target.dataset.close !== undefined) {
             modal.style.display = 'none';
+            // モーダルが閉じたら、bodyのスクロールを再度有効にする
+            document.body.style.overflow = ''; // <-- この行で元に戻します
           }
         });
       });
