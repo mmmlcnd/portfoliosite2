@@ -165,7 +165,7 @@
               </div>
               <!--/.thumbnailArea-->
               <!-- モーダル1 -->
-              <div id="modal1" class="modal">
+              <div id="modal1" class="modal-overlay">
                 <div class="modalBox">
                   <span class="closeBtn" data-close>&times;</span>
                   <div class="modalContent border">
@@ -222,7 +222,7 @@
               </div>
               <!-- /.modal -->
               <!-- モーダル2 -->
-              <div id="modal2" class="modal">
+              <div id="modal2" class="modal-overlay">
                 <div class="modalBox">
                   <span class="closeBtn" data-close>&times;</span>
                   <div class="modalContent border">
@@ -255,7 +255,7 @@
               </div>
               <!-- /.modal -->
               <!-- モーダル3 -->
-              <div id="modal3" class="modal">
+              <div id="modal3" class="modal-overlay">
                 <div class="modalBox">
                   <span class="closeBtn" data-close>&times;</span>
                   <div class="modalContent border">
@@ -293,7 +293,7 @@
             <!--/#website-->
 
             <!-- デザイン -->
-            <section id="website" class="contentsArea">
+            <section id="design" class="contentsArea">
               <h2 class="contentsHeading">Design</h2>
               <div class="thumbnailArea">
                 <!-- デザインコンテンツ1 -->
@@ -353,7 +353,7 @@
               </div>
               <!--/.thumbnailArea-->
               <!-- モーダル4 -->
-              <div id="modal4" class="modal">
+              <div id="modal4" class="modal-overlay">
                 <div class="modalBox">
                   <span class="closeBtn" data-close>&times;</span>
                   <div class="modalContent border">
@@ -376,7 +376,7 @@
               </div>
               <!-- /.modal -->
               <!-- モーダル5 -->
-              <div id="modal5" class="modal">
+              <div id="modal5" class="modal-overlay">
                 <div class="modalBox">
                   <span class="closeBtn" data-close>&times;</span>
                   <div class="modalContent border">
@@ -399,7 +399,7 @@
               </div>
               <!-- /.modal -->
               <!-- モーダル6 -->
-              <div id="modal6" class="modal">
+              <div id="modal6" class="modal-overlay">
                 <div class="modalBox">
                   <span class="closeBtn" data-close>&times;</span>
                   <div class="modalContent border">
@@ -515,28 +515,48 @@
       document.querySelectorAll('button[data-modal]').forEach((button) => {
         button.addEventListener('click', () => {
           const modalId = button.dataset.modal;
-          document.getElementById(modalId).style.display = 'flex';
+          const modal = document.getElementById(modalId);
+          const modalOverlay = document.getElementById(
+            'modal-overlay-' + modalId
+          ); // オーバーレイのIDは適宜調整
 
-          // モーダル表示時にbodyのスクロールを無効化
+          // モーダルとオーバーレイを表示
+          if (modal) modal.style.display = 'block'; // 'flex' から 'block' に変更する方が一般的に扱いやすい
+          if (modalOverlay) modalOverlay.style.display = 'block';
+
+          // bodyのスクロールを無効化
           scrollPosition = window.scrollY; // 現在のスクロール位置を記録
-          document.body.style.overflow = 'hidden'; // overflow: hidden; を適用
-          document.body.style.position = 'fixed'; // position: fixed; を適用
-          document.body.style.width = '100%'; // 幅を100%に設定（固定されたときに幅が崩れないように）
-          document.body.style.top = `-${scrollPosition}px`; // 記録したスクロール位置に固定
+          document.body.style.overflow = 'hidden';
+          document.body.style.position = 'fixed';
+          document.body.style.width = '100%';
+          document.body.style.top = `-${scrollPosition}px`;
         });
       });
 
       // 閉じる（モーダル外部または閉じるボタンをクリック）
-      document.querySelectorAll('.modal').forEach((modal) => {
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal || e.target.dataset.close !== undefined) {
-            modal.style.display = 'none';
+      document.querySelectorAll('.modal-overlay, .modal').forEach((element) => {
+        element.addEventListener('click', (e) => {
+          // モーダルオーバーレイ自体がクリックされた場合、またはdata-closeを持つ要素がクリックされた場合
+          if (
+            e.target.classList.contains('modal-overlay') ||
+            e.target.dataset.close !== undefined
+          ) {
+            const modalId =
+              e.target.dataset.modal || e.target.closest('.modal-overlay').id; // オーバーレイからの場合はdata-modalを、モーダル内の場合はclosestでIDを取得
+            const modal = document.getElementById(modalId);
+            const modalOverlay = document.getElementById(
+              'modal-overlay-' + modalId
+            );
 
-            // モーダル非表示時にbodyのスクロールを有効化
-            document.body.style.overflow = ''; // overflow をリセット
-            document.body.style.position = ''; // position をリセット
-            document.body.style.width = ''; // width をリセット
-            document.body.style.top = ''; // top をリセット
+            // モーダルとオーバーレイを非表示
+            if (modal) modal.style.display = 'none';
+            if (modalOverlay) modalOverlay.style.display = 'none';
+
+            // bodyのスクロールを有効化
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            document.body.style.top = '';
             window.scrollTo(0, scrollPosition); // 元のスクロール位置に戻す
           }
         });
