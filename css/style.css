@@ -246,7 +246,7 @@ svg {
   padding: 8% 0;
 }
 
-.thumbnailItem:nth-child(3) {
+.bottomBorder {
   border-bottom: solid #666666 1px;
 }
 
@@ -305,7 +305,10 @@ svg {
   overflow: scroll;
 }
 
-@media screen {
+@media screen and (min-width: 1080px) {
+  .modalBox {
+    width: 60%;
+  }
 }
 
 /* モーダルのスクロールバー非表示 */
