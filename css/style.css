@@ -328,12 +328,14 @@ svg {
 
 .modalContent {
   padding: 30px 0;
+  margin: 20px 0;
 }
 
 .modalHeading {
   border-left: solid #666666 3px;
   font-size: 1.3rem;
   margin: 0 0 30px 15px;
+  padding: 0 0 0 15px;
 }
 
 .modalTagArea {
