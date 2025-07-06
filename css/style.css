@@ -416,6 +416,7 @@ h4.modalDescriptionHeading:nth-of-type(1) {
 .skillTagArea {
   display: flex;
   justify-content: center;
+  text-align: center;
   padding: 0 0 20px 0;
 }
 
@@ -430,6 +431,17 @@ h4.modalDescriptionHeading:nth-of-type(1) {
 
 .skillTag {
   background-color: #ffd7d9;
+}
+
+.linkTagArea {
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.pfLink {
+  padding: 3%;
 }
 
 #pageTop {
