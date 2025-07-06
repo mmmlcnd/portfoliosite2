@@ -225,12 +225,22 @@ svg {
   margin-bottom: 20px;
 }
 
+.thumbnailArea {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1080px) {
+  .thumbnailArea {
+    width: 100%;
+  }
+}
+
 .thumbnailItem {
   border-bottom: none;
   display: flex;
   justify-content: center;
-  width: 80%;
-  margin: 0 auto;
+  padding: 8% 0;
 }
 
 .thumbnailItem:nth-child(3) {
@@ -243,11 +253,14 @@ svg {
 }
 
 .thumbnailImage {
-  border: dotted #666666 1px;
   width: 70%;
   margin: 0 auto;
   margin-bottom: 20px;
 }
+
+/* .thumbnailImage:nth-of-type(1) {
+  border: dotted #666666 1px;
+} */
 
 .thumbnailText {
   border-left: solid #666666 2px;
@@ -389,17 +402,15 @@ h4.modalDescriptionHeading:nth-of-type(1) {
 }
 
 @media screen and (min-width: 1200px) {
-  .aboutmeTextArea {
+  /* .aboutmeTextArea {
     padding: 20px 200px 60px 200px;
-  }
+  } */
 }
 
 .skillTagArea {
   display: flex;
   justify-content: center;
   padding: 0 0 20px 0;
-  width: 80%;
-  margin: 0 auto;
 }
 
 .skillHeading {
