@@ -507,8 +507,8 @@
         <!-- /.fixedBox -->
       </main>
       <footer>
-        <p id="pageTop">
-          <a href="#top"><img src="images/logo.png" alt="ページトップ" /></a>
+        <p id="pageTop" class="tagBtn">
+          <a href="#top">↑<br />TOP</a>
         </p>
         <p class="copyright"><small>&copy;2025</small></p>
       </footer>
@@ -586,6 +586,21 @@
             window.scrollTo(0, scrollPosition); // 元のスクロール位置に戻す
           }
         });
+      });
+    </script>
+
+    <!-- PageTop -->
+    <script>
+      const pageTopButton = document.getElementById('pageTop');
+
+      window.addEventListener('scroll', () => {
+        const pageHeight = window.scrollY;
+
+        if (pageHeight >= 600) {
+          pageTopButton.style.display = 'block';
+        } else {
+          pageTopButton.style.display = 'none';
+        }
       });
     </script>
   </body>
