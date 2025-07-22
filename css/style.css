@@ -28,11 +28,11 @@ body {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 a:link,
 a:visited {
-  color: #303437;
   text-decoration: none;
 }
 
@@ -53,7 +53,11 @@ a:hover {
   text-align: center;
   padding: 5px 8px;
   margin: 5px;
-  font-size: 0.8rem;
+  font-size: 1rem;
+}
+
+.tagBtn:hover {
+  color: #5b0d9f;
 }
 
 img {
@@ -90,17 +94,14 @@ header {
 }
 
 .menuBtn {
-  width: 100px;
-  height: 40px;
+  width: 150px;
+  height: 50px;
   background-color: white;
-  line-height: 35px;
+  line-height: 45px;
   padding: 0;
   margin: 4vh 4vw 0 0;
   cursor: pointer;
-}
-
-.menuBtn:hover {
-  color: #5b0d9f;
+  font-size: 1.3rem;
 }
 
 /* drawer */
@@ -148,9 +149,17 @@ header {
   }
 }
 
+.gNaviList {
+  align-items: center;
+}
+
 .gNaviItem {
   margin: 20px 0;
   text-align: center;
+}
+
+.gNaviBtn {
+  min-width: 100px;
 }
 
 /* ========== */
@@ -225,12 +234,13 @@ svg {
 .contentsHeading {
   background-color: #e4afbe;
   border-radius: 80px;
-  width: 100px;
-  height: 35px;
+  width: 150px;
+  height: 50px;
   text-align: center;
-  line-height: 35px;
+  line-height: 50px;
   margin: 0 auto;
   margin-bottom: 20px;
+  font-size: 1.3rem;
 }
 
 .thumbnailArea {
@@ -278,13 +288,13 @@ svg {
 }
 
 .thumbnailTitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0 0 5px 0;
   text-align: left;
 }
 
 .thumbnailDescripition {
-  font-size: 0.7rem;
+  font-size: 1rem;
   text-align: left;
 }
 
@@ -355,21 +365,23 @@ svg {
   border: none;
   background-color: #e4afbe;
   padding: 5px 8px;
-  margin: 5px;
+  margin: 5px 10px;
 }
 
-.modalLinkArea {
+.linkArea {
   flex-wrap: wrap;
   padding: 10px;
   width: 85%;
   border-top: none;
   margin: 0 auto;
+  display: flex;
+  white-space: nowrap;
 }
 
 .link {
   background-color: #c0afe4;
   padding: 5px 8px;
-  margin: 5px;
+  margin: 5px 10px;
 }
 
 .modalOverview,
@@ -440,15 +452,15 @@ h4.modalDescriptionHeading:nth-of-type(1) {
   background-color: #ffd7d9;
 }
 
-.linkTagArea {
-  width: 70%;
+.pfLinkArea {
   margin: 0 auto;
+  justify-content: center;
   padding: 30px 0;
-  text-align: center;
 }
 
 .pfLink {
-  padding: 3%;
+  font-size: 1.3rem;
+  padding: 10px;
 }
 
 #pageTop {
