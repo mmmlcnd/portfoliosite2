@@ -435,6 +435,7 @@ h4.modalDescriptionHeading:nth-of-type(1) {
 
 .skillHeading {
   flex-wrap: nowrap;
+  font-size: 1.1rem;
 }
 
 .tagArea {
@@ -472,7 +473,7 @@ h4.modalDescriptionHeading:nth-of-type(1) {
 }
 
 .pfLink {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding: 10px;
 }
 
