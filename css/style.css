@@ -276,15 +276,22 @@ svg {
   margin-bottom: 20px;
 }
 
-/* .thumbnailImage:nth-of-type(1) {
-  border: dotted #666666 1px;
-} */
-
 .thumbnailText {
   border-left: solid #666666 2px;
   width: 70%;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 699px) {
+  .thumbnailItem {
+    padding: 15% 0;
+  }
+
+  .thumbnailImage,
+  .thumbnailText {
+    width: 95%;
+  }
 }
 
 .thumbnailTitle {
@@ -412,9 +419,11 @@ svg {
   padding: 20px 0 0 0;
   width: 90%;
   margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-h4.modalDescriptionHeading:nth-of-type(1) {
+.modalDescriptionHeading:nth-of-type(1) {
   padding: 100px 0 0 0;
 }
 
@@ -440,6 +449,7 @@ h4.modalDescriptionHeading:nth-of-type(1) {
 
 .tagArea {
   width: 80%;
+  margin: 0 0 0 30px;
 }
 
 @media screen and (max-width: 599px) {
