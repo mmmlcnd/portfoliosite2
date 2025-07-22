@@ -96,6 +96,11 @@ header {
   line-height: 35px;
   padding: 0;
   margin: 4vh 4vw 0 0;
+  cursor: pointer;
+}
+
+.menuBtn:hover {
+  color: #5b0d9f;
 }
 
 /* drawer */
